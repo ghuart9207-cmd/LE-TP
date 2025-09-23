@@ -5,22 +5,17 @@ import (
 	"strings"
 )
 
-type Voiture struct {
-	Marque    string
-	nom       string
-	Puissance int
-	Couleur   string
-	coffre    []objet
-}
-
 type TrunkItem struct {
 	name     string
 	quantity int
 }
 
-type objet struct {
-	nom      string
-	quantité int
+type Car struct {
+	brand string
+	name  string
+	color string
+	power int
+	trunk []TrunkItem
 }
 
 func (c Car) displayCar() {
@@ -48,7 +43,7 @@ func (c Car) changeColor(color string) {
 	}
 }
 
-func (cCar) addItemToTrunck(item TrunkItem) {
+func (c Car) addItemToTrunck(item TrunkItem) {
 	isFind := false
 	for i := 0; i < len(c.trunk); i++ {
 		if strings.EqualFold(c.trunk[i].name, item.name) {
