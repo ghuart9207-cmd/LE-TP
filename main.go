@@ -56,7 +56,7 @@ func (c Car) addItemToTrunck(item TrunkItem) {
 		item.name = strings.ToLower(item.name)
 		c.trunk = append(c.trunk, item)
 	}
-	fmt.Println(fmt.Sprintf("+%d %s ajouté dans le coffre du véhicule", item.quantity, item.name))
+	fmt.Printf("+%v %v ajouté dans le coffre du véhicule", item.quantity, item.name)
 }
 
 func main() {
